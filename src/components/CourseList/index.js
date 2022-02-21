@@ -6,7 +6,7 @@ function addCourseAction(title) {
 }
 
 export default function CourseList() {
-  const qty = 2;
+  const qty = 4;
 
   const courses = useSelector(state => state.data.slice(0, qty));
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ export default function CourseList() {
         { courses.map(course => <li key={course}>{course}</li>) }
       </ul>
       <button type="button" onClick={addCourse}>
-        Adicionar curso
+        Add course
       </button>
     </>
   );
